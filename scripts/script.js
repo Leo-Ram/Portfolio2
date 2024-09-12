@@ -24,6 +24,10 @@ escribirTexto();
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
+
+navLinks.addEventListener('click', function(e) {
+    navLinks.classList.toggle('active');
+});
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) { 
         header.classList.remove('hidden');
@@ -36,6 +40,7 @@ window.addEventListener('scroll', () => {
 navegarBtn.addEventListener('click', (e) => {
     e.preventDefault();
     header.classList.remove('hidden');
+    document.getElementById('nav-links-section').style.display = 'block';
 });
 
 // Ocultar navegación al hacer clic en "Inicio"
@@ -81,3 +86,4 @@ estiloAnimacion.innerHTML = `
     }
 `;
 document.head.appendChild(estiloAnimacion);
+
